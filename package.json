@@ -8,7 +8,7 @@
     "start": "cd ./apps/directus && pnpx directus start & cd ./apps/sveltekit && pnpm run dev"
   },
   "stackblitz": {
-    "startCommand": "pnpm run dev"
+    "startCommand": "pnpm run start"
   },
   "keywords": [],
   "author": "",

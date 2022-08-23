@@ -1,1 +1,1 @@
-{"startCommand: "pnpm start"}
+{ "startCommand": "npm run dev" }

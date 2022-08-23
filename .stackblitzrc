@@ -1,1 +1,1 @@
-{"startCommand: "pnpm run dev"}
+{"startCommand: "pnpm run dev && directus start"}

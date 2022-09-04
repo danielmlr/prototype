@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "directus": "^9.16.1",
+    "directus": "^9.17.0",
     "sqlite3": "^5.0.11"
   }
 }

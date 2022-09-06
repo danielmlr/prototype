@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd apps/directus/ && pnpm directus start & cd apps/sveltekit/ && pnpm run dev"
+    "start": "pnpm install && cd apps/directus/ && pnpm directus start & cd apps/sveltekit/ && pnpm run dev"
   },
   "stackblitz": {
     "startCommand": "pnpm run start"

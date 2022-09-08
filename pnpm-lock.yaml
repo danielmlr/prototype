@@ -15,10 +15,14 @@ importers:
 
   apps/sveltekit:
     specifiers:
+      '@directus/sdk': ^10.1.4
+      '@fontsource/fira-mono': ^4.5.9
       '@sveltejs/adapter-auto': next
       '@sveltejs/kit': next
+      '@types/cookie': ^0.5.1
       '@typescript-eslint/eslint-plugin': ^5.36.2
       '@typescript-eslint/parser': ^5.36.2
+      dotenv: ^16.0.2
       eslint: ^8.23.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-svelte3: ^4.0.0
@@ -30,9 +34,14 @@ importers:
       tslib: ^2.4.0
       typescript: ^4.8.2
       vite: ^3.1.0
+    dependencies:
+      '@directus/sdk': 10.1.4
+      '@fontsource/fira-mono': 4.5.9
+      dotenv: 16.0.2
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.71
       '@sveltejs/kit': 1.0.0-next.476_svelte@3.50.0+vite@3.1.0
+      '@types/cookie': 0.5.1
       '@typescript-eslint/eslint-plugin': 5.36.2_iurrlxgqcgk5svigzxakafpeuu
       '@typescript-eslint/parser': 5.36.2_yqf6kl63nyoq5megxukfnom5rm
       eslint: 8.23.0
@@ -1049,6 +1058,14 @@ packages:
       - tedious
     dev: false
 
+  /@directus/sdk/10.1.4:
+    resolution: {integrity: sha512-e8iwEbdMLMYBfla7QPh5ZfWua03PRMhhAwMkNz1/6k+ZCHc5+VQh7oR13OFU8r5KinsVPc7TjXElw3B6wxG0wg==}
+    dependencies:
+      axios: 0.27.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@directus/shared/9.17.4_mxrafk63zfcbqjg2ren3ekpdtm:
     resolution: {integrity: sha512-SMekoiQzb39T2Bw/ljAAvoLkVd8f4dhJdy0q44HIN8eH2bwwkTMSuozYTNIDAYj4y4jq5ysT6GwIHLcVtftDQA==}
     dependencies:
@@ -1119,6 +1136,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fontsource/fira-mono/4.5.9:
+    resolution: {integrity: sha512-DDhkRUjPHwPK/wB7GM/7LzGkcEC5JyTZM93YnFoP2Qfjffq3qX1asnXNqfglgZxXHXVmu3RI8OjRf87I97XCfA==}
+    dev: false
 
   /@gar/promisify/1.1.3:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
@@ -1784,6 +1805,10 @@ packages:
     resolution: {integrity: sha512-6ckxMjBBD8URvjB6J3NcnuAn5Pkl7t3TizAg+xdlzzQGSPSmBcXf8KoIH0ua/i+tio+ZRUHEXp0HEmvaR4kt0w==}
     dev: false
     optional: true
+
+  /@types/cookie/0.5.1:
+    resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
+    dev: true
 
   /@types/cssnano/5.1.0_postcss@8.4.16:
     resolution: {integrity: sha512-ikR+18UpFGgvaWSur4og6SJYF/6QEYHXvrIt36dp81p1MG3cAPTYDMBJGeyWa3LCnqEbgNMHKRb+FP0NrXtoWQ==}
@@ -3574,6 +3599,11 @@ packages:
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /dotenv/16.0.2:
+    resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
+    engines: {node: '>=12'}
     dev: false
 
   /duplexify/4.1.2:

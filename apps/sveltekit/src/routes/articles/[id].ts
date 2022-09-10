@@ -1,4 +1,4 @@
-import { getDirectusClient } from '$lib/client';
+import { getDirectusClient } from '../../lib/directus';
 import { formatRelativeTime } from '../../../../shared/utils/format-relative-time';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */

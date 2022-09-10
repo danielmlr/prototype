@@ -1,11 +1,11 @@
-<script lang="ts">
+<script>
 	import { enhance } from '$app/forms';
 	import { invalidateAll } from '$app/navigation';
 	import { scale } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
-	import type { PageData } from './$types';
 
-	export let data: PageData;
+	/** @type {import('./$types').PageData} */
+	export let data;
 	$: todos = data.todos;
 </script>
 
@@ -21,8 +21,8 @@
 		class="new"
 		action="/todos?/add"
 		method="post"
-		use:enhance={({ form }) => {
-			return (result) => {
+		use:enhance={() => {
+			return ({ form, result }) => {
 				if (result.type === 'success') {
 					form.reset();
 					invalidateAll();

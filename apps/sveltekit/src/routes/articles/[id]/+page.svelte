@@ -8,7 +8,7 @@
 	import GithubIcon from '$lib/components/icons/Github.svelte';
 	import MoreArticles from '$lib/components/MoreArticles.svelte';
 
-	export let article, moreArticles;
+	export let data;
 </script>
 
 <div class="current-article">
@@ -18,19 +18,19 @@
 				<BackIcon />
 				<span>Back to Articles</span>
 			</a>
-			<h1 class="current-article__title">{article.title}</h1>
+			<h1 class="current-article__title">{data.article.title}</h1>
 			<div class="current-article__detail">
 				<div class="current-article__wrapperOuter">
 					<div class="current-article__wrapperInner">
 						<div class="current-article__authorImage">
-							<img src={getAssetURL(article.author.avatar)} alt="" loading="lazy" />
+							<img src={getAssetURL(data.article.author.avatar)} alt="" loading="lazy" />
 						</div>
 						<div>
 							<div class="current-article__authorName">
-								{`${article.author.first_name} ${article.author.last_name}`}
+								{`${data.article.author.first_name} ${data.article.author.last_name}`}
 							</div>
 							<div class="current-article__time">
-								{article.publish_date}
+								{data.article.publish_date}
 							</div>
 						</div>
 					</div>
@@ -66,11 +66,11 @@
 					</ul>
 				</div>
 				<div class="current-article_coverImage">
-					<img src={getAssetURL(article.cover_image)} alt="" />
+					<img src={getAssetURL(data.article.cover_image)} alt="" />
 				</div>
 			</div>
 			<div class="current-article__body">
-				<div class="current-article__bodyContent">{@html article.body}</div>
+				<div class="current-article__bodyContent">{@html data.article.body}</div>
 				<ul class="current-article__bodySocials">
 					<li>
 						<a href="https://github.com/directus" target="_blank" rel="noreferrer noopener">
@@ -104,5 +104,5 @@
 			</div>
 		</div>
 	</section>
-	<MoreArticles articles={moreArticles} />
+	<MoreArticles articles={data.moreArticles} />
 </div>

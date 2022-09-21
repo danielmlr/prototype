@@ -1,7 +1,7 @@
 <script>
 	import { getDirectusClient } from '$lib/directus';
-
-	import(getDirectusClient);
+	import { getAssetURL } from '$lib/get-asset-url';
+	export let article;
 </script>
 
 <article class="hero">
